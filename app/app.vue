@@ -33,14 +33,13 @@
               <strong>Numer telefonu:</strong>
               <span>{{ phoneToShow }}</span>
 
-              <button
-                v-if="!showPhone"
-                class="user__small-btn"
-                type="button"
-                @click="showPhone = true"
-              >
-                Pokaż numer
-              </button>
+            <button
+  class="user__small-btn"
+  type="button"
+  @click="showPhone = !showPhone"
+>
+  {{ showPhone ? 'Ukryj numer' : 'Pokaż numer' }}
+</button>
             </p>
           </div>
 
@@ -64,18 +63,17 @@
             </p>
           </div>
 
-          <button
-            v-if="!showAllAbout"
-            class="user__more"
-            type="button"
-            @click="showAllAbout = true"
-          >
-            Rozwiń opis
-          </button>
+<button
+  class="user__more"
+  type="button"
+  @click="showAllAbout = !showAllAbout"
+>
+  {{ showAllAbout ? 'Zwiń opis' : 'Rozwiń opis' }}
+</button>
         </div>
       </div>
     </section>
-  </main>
+  </main> 
 </template>
 
 <script setup>
